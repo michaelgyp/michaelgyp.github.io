@@ -4,14 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miki Zone</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #main {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
-    <div id="center-container">
-        <img id="logo" src="Miki Zone (Vector).png" alt="Miki Zone Logo">
-        <a id="itchio-link" href="https://miki-zone.itch.io">
-            <button>Itch.io</button>
-        </a>   
-    </div>       
+    <div id="main">
+        <h1>Miki Zone</h1>
+        <p>Game Developer • Content Creator • Student</p>
+        <a href="https://miki-zone.itch.io" target="_blank">Itch.io</a>
+        <a href="https://youtube.com/@YourChannel" target="_blank">YouTube</a>
+        <a href="mailto:your@email.com">Email</a>
+    </div>
 </body>
 </html>
