@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Michael G.Y.P.</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        #main {
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 0.3em;
-        }
-
-        p {
-            font-size: 1em;
-            margin-bottom: 1em;
-            color: #bbb;
-        }
-
-        a {
-            display: inline-block;
-            margin: 5px 10px;
-            padding: 10px 15px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        a:hover {
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="card.css" />
 </head>
 <body>
     <div id="main">
-        <h1>Hey! I'm Michael G.Y.P.</h1>
-        <p>Game Developer • Content Creator • Student</p>
-        <a href="https://bitimpact.itch.io" target="_blank">Itch.io</a>
-        <a href="https://youtube.com/@michaelgyp" target="_blank">YouTube</a>
-        <a href="mailto:michaelgusti192@gmail.com">Email</a>
-        <a href="https://tiktok.com/@michael_gyp" target="_blank">TikTok</a>
-        <a href="https://instagram.com/michael_gyp" target="_blank">Instagram</a>
-        <a href="https://reddit.com/u/Miki_0805" target="_blank">Reddit</a>
-        <a href="https://x.com/miki080510_dev" target="_blank">X (Twitter)</a>
-        <a href="https://github.com/michaelgyp" target="_blank">GitHub</a>
+        <section id="home" class="page active">
+            <h1>Hi! I'm Michael</h1>
+            <p>Game Developer • Content Creator • Student</p>
+            <div id="home-btn-container">
+                <a data-target="projects">See My Projects</a>
+                <a data-target="socials">Socials</a>
+            </div>
+        </section>
+
+        <section id="projects" class="page">
+            <h1>My Projects</h1>
+            <p>Here are some games I’ve made or contributed!</p>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://img.itch.zone/aW1nLzIxNTEyMDIwLnBuZw==/315x250%23c/pqHegM.png">
+                    <div class="card-content">
+                        <h3>Color Swab Climb</h3>
+                        <p id="creator">by Michael</p>
+                        <p></p>
+                        <a href="https://bitimpact.itch.io/color-swap-climb" target="_blank">Play Now on Itch.io</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\CTW.png">
+                    <div class="card-content">
+                        <h3>Catching the Wind</h3>
+                        <p id="creator">by Michael, Chris Bullock, Mr.Rozmarin & Herald</p>
+                        <p></p>
+                        <a href="https://mr-rozmarin.itch.io/swat-it" target="_blank">Play Now on Itch.io</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images\Swat It.png">
+                    <div class="card-content">
+                        <h3>Swat It</h3>
+                        <p id="creator">by Michael & Mr.Rozmarin</p>
+                        <p></p>
+                        <a href="https://mr-rozmarin.itch.io/swat-it" target="_blank">Play Now on Itch.io</a>
+                    </div>
+                </div>
+            </div>
+            <a data-target="home">Back to Home</a>
+        </section>
+        
+        <section id="socials" class="page">
+            <h1>My Socials</h1>
+            <p>Here you can find me across different platforms!</p>
+            <div id="socials-container">
+                <a href="mailto:michaelgusti192@gmail.com">Email</a>
+                <a href="https://bitimpact.itch.io" target="_blank">Itch.io</a>
+                <a href="https://youtube.com/@michaelgyp" target="_blank">YouTube</a>
+                <a href="https://tiktok.com/@michael_gyp" target="_blank">TikTok</a>
+                <a href="https://instagram.com/michael_gyp" target="_blank">Instagram</a>
+                <a href="https://reddit.com/u/Miki_0805" target="_blank">Reddit</a>
+                <a href="https://x.com/miki080510_dev" target="_blank">X (Twitter)</a>
+                <a href="https://github.com/michaelgyp" target="_blank">GitHub</a> 
+            </div>
+            <a data-target="home">Back to Home</a>
+        </section>
+
+        <footer>
+            <p>©2025 Michael Gusti Yanu Putra</p>
+        </footer>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -1,17 +1,84 @@
-#center-container {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#main {
     display: flex;
-    flex-direction: column;  /* Stack elements vertically */
-    justify-content: center; /* Horizontally center content */
-    align-items: center;     /* Vertically center content */
-    height: 100vh;           /* Full viewport height */
+    flex-direction: column;     /* stack items vertically */
+    justify-content: center;    /* vertical centering */
+    align-items: center;        /* horizontal centering */
+    height: 100vh;              /* full screen height */
+    padding: 0 20px;
+    text-align: center;
 }
 
-#logo {
-    width: 500px;    /* Adjust the width of the logo */
-    margin-bottom: 20px; /* Add space between the logo and the button */
+#home-btn-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+    margin-left: 60px;
+    gap: 8px;
 }
 
-#itchio-link button {
-    padding: 10px 20px;
-    font-size: 16px;
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #bbb;
+}
+
+a, button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover, button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+a[data-target] {
+    cursor: pointer;
+}
+
+#socials-container {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 20px;
+}
+
+.page {
+    display: none; /* completely remove from layout */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.page.active {
+    display: block; /* show the active page */
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9em;
 }

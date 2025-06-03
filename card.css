@@ -1,0 +1,55 @@
+.card-container {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 20px;
+}
+
+.card {
+    width: auto;
+    display: flex;
+    overflow: hidden;
+    color: #fff;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card img {
+    width: 200px;
+    height: 190px;
+    zoom: 1.2;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.card-content {
+    align-items: flex-start;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 40px;
+    margin: 0px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.card-content p {
+    margin: 0;
+    text-align: left;
+    width: 24vh;
+}
+
+.card-content a {
+    margin: 0;
+    margin-top: 12px;
+}
+
+#creator {
+    margin-top: 0;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
