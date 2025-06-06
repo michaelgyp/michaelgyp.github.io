@@ -1,84 +1,187 @@
+:root {
+    /* Spacing & Radius */
+    --margin: 8px;
+    --margin-far: 16px;
+    --padding: 12px;
+    --radius: 12px;
+    --radius-sm: 8px;
+
+    /* Colors */
+    --background-color: #141414;
+    --text-color: #e8e8e8;
+    --primary: #454545;
+    --border: #343434;
+    --hover: #161616;
+
+    /* Font Sizes */
+    --font-xl: 80px;
+    --font-lg: 50px;
+    --font-md: 24px;
+    --font-sm: 20px;
+
+    --font-xl-mobile: 52px;
+    --font-md-mobile: 16px;
+    --font-sm-mobile: 16px;
+}
+
 body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 100vh;
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-#main {
-    display: flex;
-    flex-direction: column;     /* stack items vertically */
-    justify-content: center;    /* vertical centering */
-    align-items: center;        /* horizontal centering */
-    height: 100vh;              /* full screen height */
-    padding: 0 20px;
-    text-align: center;
-}
-
-#home-btn-container{
     display: flex;
     flex-direction: column;
-    margin-right: 60px;
-    margin-left: 60px;
-    gap: 8px;
+    align-items: center;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 0.3em;
+    font-size: var(--font-xl);
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    margin: 0;
 }
 
 p {
-    font-size: 1em;
-    margin-bottom: 1em;
+    font-size: var(--font-md);
+    font-weight: 300;
+    margin: 0;
     color: #bbb;
 }
 
-a, button {
+/* Modern Button-Like Links */
+a {
     display: inline-block;
-    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+
+    font-size: var(--font-sm);
+    font-weight: 400;
     text-decoration: none;
-    color: #fff;
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
 
-a:hover, button:hover {
-    background-color: #333;
-    color: #fff;
-}
+    color: var(--text-color);
+    background-color: var(--primary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
 
-a[data-target] {
     cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    background-color: var(--hover);
+    transform: translateY(-1px);
+}
+
+/* Page Transitions */
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks on hidden pages */
+    transition: opacity 0.3s ease;
+}
+
+.page.active {
+    opacity: 1;
+    pointer-events: auto; /* Only the active page is interactable */
+    z-index: 1;
+}
+
+
+/* Section Title */
+#head-line {
+    text-align: center;
+}
+
+/* Intro Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    gap: var(--margin-far);
+}
+
+/* Link Group */
+#links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    gap: var(--margin);
+}
+
+/* Social Buttons */
+#socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-far);
 }
 
 #socials-container {
     display: flex;
     flex-direction: row;
-    margin: 40px;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--margin);
+    width: 15%;
 }
 
-.page {
-    display: none; /* completely remove from layout */
-    opacity: 0;
-    transition: opacity 0.3s ease;
+#socials-container a {
+    padding: 10px 16px;
+    flex-grow: 1;
+    min-width: 120px;
 }
 
-.page.active {
-    display: block; /* show the active page */
-    opacity: 1;
-}
-
-footer {
+#home-link {
+    display: none; /* hide the link | show only on mobile */
+    margin: 0;
+    width: 10%;
     text-align: center;
-    padding: 20px;
-    color: #888;
-    font-size: 0.9em;
+    margin-top: var(--margin);
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: var(--font-xl-mobile);
+    }
+
+    p {
+        font-size: var(--font-md-mobile);
+    }
+
+    a {
+        font-size: var(--font-sm-mobile);
+        border-radius: var(--radius-sm);
+    }
+
+    #links {
+        width: 30%;
+    }
+
+    #links a {
+        padding: 8px;
+    }
+
+    #home-link {
+        display: inline-block; /* hide the link | show only on mobile */
+    }
 }
