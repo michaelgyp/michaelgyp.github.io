@@ -99,9 +99,8 @@ a:hover {
     z-index: 1;
 }
 
-
 /* Section Title */
-#head-line {
+.head-line {
     text-align: center;
 }
 
@@ -149,6 +148,16 @@ a:hover {
     min-width: 120px;
 }
 
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    gap: var(--margin-far);
+}
+
 #home-link {
     display: none; /* hide the link | show only on mobile */
     margin: 0;
@@ -182,6 +191,15 @@ a:hover {
     }
 
     #home-link {
-        display: inline-block; /* hide the link | show only on mobile */
+        display: inline-block;
     }
+}
+
+
+#games {
+    max-width: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--margin-far);
 }
