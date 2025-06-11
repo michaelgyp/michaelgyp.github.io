@@ -93,7 +93,7 @@ a:hover {
     width: 100%;
 
     opacity: 0;
-    pointer-events: none; /* Prevent clicks on hidden pages */
+    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
@@ -168,7 +168,7 @@ a:hover {
 #home-link {
     display: none; /* hide the link | show only on mobile */
     margin: 0;
-    width: 20%;
+    width: fit-content;
     text-align: center;
     margin-top: var(--margin);
 }
@@ -199,14 +199,6 @@ a:hover {
 
     #home-link {
         display: block;
-    }
-
-    #games {
-        width: 100%;
-    }
-
-    #games iframe {
-        width: 50px
     }
 }
 
