@@ -1,17 +1,28 @@
-function showPageFromHash() {
-    const pages = document.querySelectorAll('.page');
-    const hash = window.location.hash || '#home'; // default to #home
-    const targetId = hash.replace('#', '');
+(function () {
+  "use strict";
 
-    pages.forEach(page => {
-        page.classList.remove('active');
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll("[data-animate]");
+    if (!items.length) return;
 
-    const targetPage = document.getElementById(targetId);
-    if (targetPage) {
-        targetPage.classList.add('active');
-    }
-}
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
 
-window.addEventListener('DOMContentLoaded', showPageFromHash);
-window.addEventListener('hashchange', showPageFromHash);
+          if (entry.isIntersecting) {
+            el.classList.add("is-visible");
+          } else {
+            el.classList.remove("is-visible"); // Reset when leaving viewport
+          }
+        });
+      },
+      {
+        threshold: 0.25, // triggers when 10% visible
+        rootMargin: "0px 0px -10px 0px",
+      }
+    );
+
+    items.forEach((el) => observer.observe(el));
+  });
+})();
