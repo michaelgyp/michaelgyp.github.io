@@ -3,73 +3,85 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Michael G. Y. P.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Michael Gusti Yanu Putra</title>
+    <link rel="icon" type="image/x-icon" href="assets/mgyp.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <section id="home" class="page active">
-        <div class="head-line">
-            <h1>Hi! I'm Michael</h1>
-            <p>Student • Game Developer • Content Creator</p>
-        </div>
-        <div id="links">
-            <a href="#projects">My projects</a>
-            <a href="#socials">My socials</a>
-        </div>
-    </section>
-    <section id="projects" class="page">
-        <div class="head-line">
-            <h2>My Projects</h2>
-            <p>Some games I've made solo or with a team!</p>
-        </div>
-        <div id="games">
-            <iframe frameborder="0" src="https://itch.io/embed/3601493?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=343434">
-                <a href="https://bitimpact.itch.io/color-swap-climb">Color Swap Climb by BitImpact</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/2372748?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=537090">
-                <a href="https://heraldod.itch.io/catching-the-wind">Catching the Wind by Herald, BitImpact, Chris Bullock, Mr_Rozmarin</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/3348185?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=3ab4b4">
-                <a href="https://mr-rozmarin.itch.io/swat-it">Swat It by Mr_Rozmarin, BitImpact</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/2147118?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=363636">
-                <a href="https://bitimpact.itch.io/triangle-shooter">Triangle Shooter by BitImpact</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/2236937?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=333333">
-                <a href="https://bitimpact.itch.io/mars-cave">Mars Cave by BitImpact</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/2256594?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=333333">
-                <a href="https://bitimpact.itch.io/mission-get-away">Mission : Get_Away by BitImpact</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/2163341?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=6c6c6c">
-                <a href="https://mr-rozmarin.itch.io/sebuc">sebuC by Mr_Rozmarin, BitImpact</a>
-            </iframe>
-            <iframe frameborder="0" src="https://itch.io/embed/2329636?border_width=0&amp;bg_color=141414&amp;fg_color=e8e8e8&amp;link_color=454545&amp;border_color=e15858">
-                <a href="https://mr-rozmarin.itch.io/anti-virus">Anti-Virus by Mr_Rozmarin, BitImpact</a>
-            </iframe>
-        </div>
-        <a id="home-link" href="#home">Home</a>
-    </section>
-    <section id="socials" class="page">
-        <div class="head-line">
-            <h2>
-                My Socials
-            </h2>
-            <p>Feel free to contact me anytime about anything!</p>
-        </div>
-        <div id="socials-container">
-            <a href="mailto:michaelgusti192@gmail.com">Email</a>
-            <a href="https://github.com/michaelgyp" target="_blank">GitHub</a> 
-            <a href="https://mikizone.itch.io/" target="_blank">Itch.io</a>
-            <a href="https://youtube.com/@michaelgyp" target="_blank">YouTube</a>
-            <a href="https://instagram.com/michael_gyp" target="_blank">Instagram</a>
-            <a href="https://tiktok.com/@michael_gyp" target="_blank">TikTok</a>
-            <a href="https://reddit.com/u/Miki_0805" target="_blank">Reddit</a>
-            <a href="https://x.com/the_mgyp" target="_blank">X (Twitter)</a>
-        </div>
-        <a id="home-link" href="#home">Home</a>
-    </section>
-    <script src="main.js"></script>
+<body class="">
+    <div class="scroll-wrapper">
+
+		<header>
+			<h1 data-animate>Hi! I'm Michael</h1>
+			<div id="tagline" data-animate>
+				I make experimental games and projects
+				<br>
+				Student • Game Developer • Experimenter
+			</div>
+			<a class="arrow-container" href="#featured">
+				<span data-animate>[ See What I've Made ] </span>
+				<span class="arrow" data-animate>▼</span>
+			</a>
+		</header>
+
+		<section id="featured">
+			<h2 data-animate>Featured Projects</h2>
+			<div class="featured-wrapper">
+				<div class="featured-item dark-glow" data-animate>
+					<img src="assets/CSC.gif" alt="" loading="lazy">
+					<h3>Color Swap Climb</h3>
+					<div class="ui-tagline">[Game] [Solo]</div>
+					<p>
+						Experimental platformer game with color-based mechanics.
+					</p>
+					<a class="btn" href="https://bitimpact-studio.itch.io/color-swap-climb" target="_blank">Play Now</a>
+				</div>
+				<div class="featured-item dark-glow" data-animate>
+					<img src="assets/CTW.gif" alt="" loading="lazy">
+					<h3>Catching the Wind</h3>
+					<div class="ui-tagline">[Game] [Collaboration]</div>
+					<p>
+						Cat platformer (or a catformer) about jumping around and going higher and higher.
+					</p>
+					<a class="btn" href="https://heraldod.itch.io/catching-the-wind" target="_blank">Play Now</a>
+				</div>
+				<div class="featured-item dark-glow" data-animate>
+					<img src="assets/SI.gif" alt="" loading="lazy">
+					<h3>Swat It</h3>
+					<div class="ui-tagline">[Game] [Collaboration]</div>
+					<p>
+						Incremental jam game about swatting flies.
+					</p>
+					<a class="btn" href="https://mr-rozmarin.itch.io/swat-it" target="_blank">Play Now</a>
+				</div>
+			</div>
+			<a class="arrow-container" href="#links" data-animate>
+				<span data-animate>[ Links ] </span>
+				<span class="arrow" data-animate>▼</span>
+			</a>
+		</section>
+
+		<section class="links-section" id="links">
+			<div class="links-wrapper">
+				<h2 data-animate>Links</h2>
+				<ul>
+					<li data-animate><a href="https://bitimpact-studio.itch.io/" target="_blank">Play All of My Games — Itch.io</a></li>
+					<li data-animate><a href="https://github.com/michaelgyp" target="_blank">GitHub — Code, tools, experiments</a></li>
+					<li data-animate><a href="mailto:michaelgusti192@gmail.com">Contact — Email</a></li>
+					<li data-animate><a href="https://github.com/michaelgyp/michaelgyp.github.io">Source Code</a></li>
+				</ul>
+			</div>
+
+			<footer>
+				<div data-animate>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> • <a href="https://github.com/michaelgyp/michaelgyp.github.io">Source code</a> on GitHub.</div>
+				<div class="footer-info" data-animate>
+					<span>© 2026 Michael Gusti Yanu Putra</span> • 
+					<span>Last updated: February 2026</span>
+				</div>
+			</footer>
+		</section>
+
+
+	</div>
+	<script defer src="./main.js"></script>
 </body>
 </html>
