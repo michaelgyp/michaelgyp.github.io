@@ -337,6 +337,29 @@ header #tagline {
 
 
 @media (max-width: 1000px) {
+	:root {
+		/* landing page */
+		--ff: "Outfit", sans-serif;
+
+		/* Reduced typographic scale for smaller screens */
+		--h1: var(--fw-bold) 2.25rem/1.05em var(--ff);
+		--h2: var(--fw-bold) 1.6rem/1.2em var(--ff);
+		--h3: var(--fw-bold) 1.25rem/1.2em var(--ff);
+		--h4: var(--fw-bold) 1rem/1.4em var(--ff);
+		--big: var(--fw-medium) 1rem/1.4em var(--ff);
+		--p: var(--fw-regular) 0.95rem/1.4em var(--ff);
+		--small: .65rem/1.8em var(--ff);
+
+		/* UI sizes scaled down for mobile */
+		--h1ui: var(--fw-bold) 2rem/1.1em var(--ff);
+		--h2ui: var(--fw-bold) 1.5rem/1.15em var(--ff);
+		--h3ui: var(--fw-bold) 1.1rem/1.2em var(--ff);
+		--h4ui: var(--fw-bold) .95rem/1.4em var(--ff);
+		--bigui: var(--fw-medium) 1rem/1.4em var(--ff);
+		--pui: var(--fw-regular) .85rem/1.4em var(--ff);
+		--smallui: .75rem/1.6em var(--ff);
+	}
+
 	.scroll-wrapper {
 		scroll-snap-type: none;
 	}
@@ -349,6 +372,12 @@ header #tagline {
 	.featured-item {
 		max-width: 90%; /* shrink items */
 		margin: var(--spacing3) 0; /* reduce vertical space */
+	}
+}
+
+@media (max-width: 370px) {
+	.separator {
+		display: none; /* hide separators for cleaner mobile layout */
 	}
 }
 
